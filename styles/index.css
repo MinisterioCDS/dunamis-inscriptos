@@ -61,6 +61,44 @@
     transform: scale(1.04);
 }
 
+.container #searchBar-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+    margin: 20px 0 30px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.container #searchBar-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 30px 20px; 
+}
+
+.container #searchBar-container .box p{
+    color: #444;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.container #searchBar-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.container #searchBar-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+    transform: scale(1.04);
+}
+
 @media (max-width:768px){
     .container{
         padding: 20px;
