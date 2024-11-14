@@ -1,9 +1,10 @@
 fetch("https://dunamis-back.onrender.com").then(res => res.json().then(response => {
   // const body = document.getElementsByTagName("body")[0];
-  const container = document.getElementsByClassName("box-container")[0];
+  const container2 = document.getElementsByClassName("container2")[0];
   const count = document.createElement("h3");
   count.innerHTML = `Cantidad de jóvenes: ${response.cantidad}`;
-  container.appendChild(count);
+  container2.appendChild(count);
+  const boxContainer = document.getElementsByClassName("box-container")[0];
   for (joven of response.jovenes) {
     const card = document.createElement("div");
     card.classList.add("box");
@@ -21,7 +22,7 @@ fetch("https://dunamis-back.onrender.com").then(res => res.json().then(response 
     card.appendChild(lastname);
     card.appendChild(age);
     card.appendChild(phone);
-    container.appendChild(card);
+    boxContainer.appendChild(card);
   };
 })).catch(error => {
   console.log(error);
