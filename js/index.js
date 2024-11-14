@@ -32,7 +32,7 @@ const inputBuscar = document.getElementById("search-input");
 btnBuscar.addEventListener("click", e => {
   e.preventDefault();
   if(!inputBuscar.value) {
-    alert("Escriba un nombre");
+    alert("No se encuentra registrado");
   }else {
     fetch(`https://dunamis-back.onrender.com?nombre=${inputBuscar.value}`).then(res => res.json().then(response => {
       inputBuscar.value = "";
