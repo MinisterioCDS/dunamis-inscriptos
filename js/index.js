@@ -2,10 +2,8 @@ const container = document.getElementsByClassName("container")[0];
 const boxContainer = document.getElementsByClassName("box-container")[0];
 
 fetch("https://dunamis-back.onrender.com").then(res => res.json().then(response => {
-  const container2 = document.getElementsByClassName("container2")[0];
-  const count = document.createElement("h3");
+  const count = document.getElementById("count");
   count.innerHTML = `Cantidad de jóvenes: ${response.cantidad}`;
-  container2.appendChild(count);
   for (joven of response.jovenes) {
     const card = document.createElement("div");
     card.classList.add("box");
